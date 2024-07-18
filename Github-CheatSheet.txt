@@ -1,0 +1,46 @@
+GitHub chearsheet
+
+branch - allows to multiple users to work on same project.
+
+to get branch - git branch
+to create branch - git branch "branch name"
+to renew branch name - git branch -m "new-name"
+to delete branch name - git branch -d "branch name"
+to navigate another branch - git checkout branch-name
+to create and navigate another branch at a time - git checkout -b branch-name
+
+to commit - git push origin branch-name
+
+how to merge - 
+1. manual 
+	1. to check the diff git diff branch-name
+	2. git merge branch-name
+
+2. By Pull request - 
+	1. add a pull request is to merge 
+	2. use pull command - git pull origin main
+
+merge conflicts - git fails to merge the branches automatically due to merge conflicts 
+
+
+Undoing Changes - when we add or commit some changes and later on want to delete those changes we can use following commands.
+1. when changes are added but not commited - git reset file-name // for 1 file
+					     git reset // for multiple files at a time
+
+2. When changes are added and commited -git reset HEAD~1
+
+
+git log // to see all commits
+
+
+3. multiple commits undo - git reset hash-code-commit
+			   git reset --hard hash-code-commit
+
+
+
+fork - it is like copy of a repo with same code and setting. like a rough copy
+
+
+
+
+
