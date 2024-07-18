@@ -130,6 +130,24 @@ export class DemoAngularMaterailModule {
 #generate components
 -> login cmd-- ng g c login
 -> signup cmd-- ng g c signup
+-> add the path for login & sign up in app.module.ts route
+
+``` {path : 'login', component: LoginComponent},
+  {path : 'register', component: SignupComponent},
+```
+#add the routerLink and routeroutlet in app.module.html 
+-> router link connects to tyhe routs
+```
+<mat-toolbar color="primary" class="navbar">
+    <span class="navbar-brand">E-Commerce</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/order" routerLinkActive="active">Track Order</button>
+    <button mat-button routerLink="/register" routerLinkActive="active">Register</button>
+    <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+```
 
 
 
