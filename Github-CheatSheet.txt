@@ -1,5 +1,40 @@
 GitHub chearsheet
+Git - Version Control System
+	tool too track the change in code
 
+
+ use - Track the history
+	Collaborate
+	
+
+GitHub - Website helps to store and manage our code using GIT.
+	Folder like structure (Repo)
+	Also can see the other peoples code and make a copy.
+	
+
+Read.ME Files -- File with details about the project.
+clone -- cloning a repository on our local system.
+	
+steps to clone -1. go to repository
+		2. copy the HTTP link under code button
+		3. create a new folder on system and navigate the folder in terminal.
+		4. use command git clone <http Link>
+
+git status - show the status of repo
+git add <file name > / git add . -add the changes made
+git commit -m < message /comment> -  commits or saved like event
+git push origin main -  finalise or push the changes to GitHub		
+
+Status - 
+	untrack -  new file ..git doesn't yet track
+	modified - changed file
+	stagged - file ready to commit
+	unmodified - unchanged file
+
+Init - command use to create a GitHub repo existing project on local system.
+	git init
+
+Branch - diff departments
 branch - allows to multiple users to work on same project.
 
 to get branch - git branch
