@@ -33,6 +33,8 @@ Status -
 
 Init - command use to create a GitHub repo existing project on local system.
 	git init
+	
+	
 
 Branch - diff departments
 branch - allows to multiple users to work on same project.
