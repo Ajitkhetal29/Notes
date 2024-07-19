@@ -1,4 +1,4 @@
-EcommerseWeb  Project
+EcommerseWeb  Project Notes
 Front End Angular - material
 backend - spring boot
 database - mysql

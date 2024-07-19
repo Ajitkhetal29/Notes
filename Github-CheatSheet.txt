@@ -44,6 +44,7 @@ to delete branch name - git branch -d "branch name"
 to navigate another branch - git checkout branch-name
 to create and navigate another branch at a time - git checkout -b branch-name
 
+
 to commit - git push origin branch-name
 
 how to merge - 
