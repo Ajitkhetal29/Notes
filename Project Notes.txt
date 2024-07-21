@@ -18,9 +18,13 @@ Steps for project
 - follow all procedure for angular .. web page link is ->  https://tailwindcss.com/docs/guides/angular
 - run the project again
 
+* create the carousel component for home page
+- crate the component
+- add html code 
+- use scss for styling
 
 
-
+  
 
 
 
