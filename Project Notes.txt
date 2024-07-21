@@ -1,0 +1,34 @@
+
+
+Requirements
+- vscode
+- node.js
+- angular
+
+
+Steps for project
+
+* Project intialization
+- to start the project use angular command - ng new project-name.
+- use scss. 
+- after prject crewation come to project directory by using cd project-name command.
+
+* Talwind CSS
+- To download talwind css go to talwind css webpage 
+- follow all procedure for angular .. web page link is ->  https://tailwindcss.com/docs/guides/angular
+- run the project again
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
