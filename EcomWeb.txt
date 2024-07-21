@@ -1,0 +1,158 @@
+EcommerseWeb  Project
+Front End Angular - material
+backend - spring boot
+database - mysql
+
+requirements - mysql workbench , java IDE , vscode 
+
+steps -- 
+
+#spring initiliasation
+-> go to spring initiliaser and generate  project 
+-> download the zip and extract 
+-> open the project in IDE
+
+#mysql setup
+-> create new schema 
+
+#set up application properties 
+-> set up the application appn prpoerties like given below
+
+
+``` 
+spring.application.name=E-com
+spring.datasource.url=jdbc:mysql://localhost:3306/ecom_angular
+spring.datasource.username=root
+
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+```
+
+# create user class
+-> create one class User
+
+```
+
+@Entity
+@Data
+@Table(name = "users")
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    private String email;
+
+    private String password;
+
+    private String name;
+
+    @Enumerated(EnumType.STRING)  // Store the enum as a string
+    private UserRole role;
+
+    @Lob
+    @Column(columnDefinition = "LONGBLOB")
+    private byte[] img;
+}
+
+
+```
+-> run the application, it will create one table users in mysql database.
+
+
+# create angular project 
+-> start new angular project cmd -- ng new Ecommerseweb
+-> install angular material cmd -- ng add @angular/material
+-. copy and paste the following required modulke file for demoangularmatyerialmodule.ts
+```
+import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
+
+
+
+
+@NgModule({
+  exports: [
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule,
+    MatPaginatorModule,
+    MatChipsModule,
+    MatMenuModule,
+    MatRadioModule,
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatDialogModule,
+    MatTableModule
+  ]
+})
+export class DemoAngularMaterailModule {
+
+}
+```
+
+#generate required modules
+ -> custromer cmd-- ng g nodule customer --route customer --module app.module
+    it will create on lazy module and route for customer in app.module.ts file
+
+ -> admin cmd-- ng g nodule admin --route admin --module app.module
+    it will create on lazy module and route for admin in app.module.ts file
+
+#generate components
+-> login cmd-- ng g c login
+-> signup cmd-- ng g c signup
+-> add the path for login & sign up in app.module.ts route
+
+``` {path : 'login', component: LoginComponent},
+  {path : 'register', component: SignupComponent},
+```
+#add the routerLink and routeroutlet in app.module.html 
+-> router link connects to tyhe routs
+```
+<mat-toolbar color="primary" class="navbar">
+    <span class="navbar-brand">E-Commerce</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/order" routerLinkActive="active">Track Order</button>
+    <button mat-button routerLink="/register" routerLinkActive="active">Register</button>
+    <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+```
+
+
+
+
+
+
+
+
