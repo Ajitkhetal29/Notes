@@ -21,10 +21,85 @@ Steps for project
 - add html code 
 - use scss for styling
 
+* create product slider for Home Page 
+-> create two components product-card & product-slider.
+      ng g c product-card
+      ng g c product-slider
+-> write the html code to show product details in product-card.html
+      ``
+      <div class="card-group" style="background: black;">
+          <div class="card" style="width: 250px;height: 450px;margin-right: 5px;">
+              <img [src]="product.imageUrl" class="card-img-top" alt="..." style="height: 320px;width: 250px;">
+              <div class="card-body">
+                  <h5 class="card-title">{{product.brand}}</h5>
+                  <p class="card-text">{{product.title}}</p>
+              </div>
+          </div>
+      ``
+->  declare input properties for product-card-ts
+      ``
+      export class HomeProductCardComponent {
+      
+        @Input() title : any;
+        @Input() product : any;
+      
+      }
+      
+      ``
+-> now come to product-slider.html and write the code for showing slider of products
+``
+    <div class="p-2 lg:px-20 lg:py-5" style="background: black;">
+        <p class="font-semibold text-2xl opacity-75" style="color: white;">{{title}}</p>
+    
+        <div class="flex flex-wrap justify-center">
+    
+            <ng-container *ngFor="let item of products">
+    
+                <app-home-product-card [product]="item"></app-home-product-card>
+    
+            </ng-container>
+    
+        </div>
+    </div>
 
+```
+--> eclare the properties in product-slider.ts
+  ``
+      export class HomeProductSliderComponent { 
+      
+        @Input() title : any;
+        @Input() products : any
+      
+      }
+  ``
+-> to add this component in home-comonent first add html in home.html
+``
+<div>
+        <app-home-product-slider title="Mens Jeans" [products]="men_jenas"></app-home-product-slider>
+        <app-home-product-slider title="Dress" [products]="dress"></app-home-product-slider>
+        <app-home-product-slider title="Kurta" [products]="kurta"></app-home-product-slider>
+        <app-home-product-slider title="Gouns" [products]="gouns"></app-home-product-slider>
+        <app-home-product-slider title="Lengha Choli" [products]="lenghaCholi"></app-home-product-slider>
+    </div>
+``
+-> now add homeComponent.ts code
+```
+    @Input() title : any;
   
-
-
+    men_jenas : any;
+    dress : any;
+    kurta : any ;
+    gouns : any;
+    lenghaCholi : any ;
+  
+    ngOnInit(){
+      this.men_jenas = men_jeans.slice(0,5);
+      this.dress = dress.slice(0,5);
+      this.kurta = kurta.slice(0,5);
+      this.gouns = gouns.slice(0,5);
+      this.lenghaCholi = lehngacholi.slice(0,5);
+    }
+```
 
 
 
