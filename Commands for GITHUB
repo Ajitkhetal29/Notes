@@ -1,0 +1,20 @@
+To add your work on GitHub follow below - steps 
+	
+	1. initiate one empty repository in project by running cmd - git init
+	2. git status
+	3. git add .
+	4.git commit -m "first commit"
+	5.git branch -M main
+	6.git remote add origin https://github.com/Ajitkhetal29/React-Tutorial.git
+	7.git push -u origin main
+
+to clone project from GitHub
+	
+	1.git clone https://github.com/USERNAME/REPO_NAME.git
+	2.cd REPO_NAME
+	3.Start Working: Now you can make changes to your project files locally.
+	4.Stage, Commit, and Push Changes: After making changes
+	5.git add .
+	6.git commit -m "Your message describing the changes"
+	7.git push origin master
+	
