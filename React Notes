@@ -138,6 +138,19 @@ Features
 			- used for reusable components
 			- can access with props.children
 			- easy to reuse components
+	State management - 
+			- state represents data that changes over time
+			- local and private tho the component
+			- changes can cause the componnt to reload
+			- for functional components use useState hook.
+			- functions taht staterts with use called Hooks.
+			- hooks should be use inside component.
+
+	Forms - 
+			- each input state can be srored in component state
+			- can use onChange to detect input changes
+			- can use onSubmit form form submission and prevent default with event.preventDefault()
+			- validation - can use custom validation or third patry libraries 
 
 
 	State: Components can manage their internal state using the useState hook. This state dictates the component’s appearance and behavior, and updates trigger re-renders.	
