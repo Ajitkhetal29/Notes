@@ -15,6 +15,7 @@ Features
 
 	2.Virtual DOM (Document Object Model):
 	it is an in-memory representation of DOM.
+	The DOM is represented as a tree data structure.
 	DOM Refer to the Document object model that represents the content of XML or HTML documents as a tree structure so the pragrams can be read , accessed and changed in document structure , style and contenrt.
 	React uses a virtual DOM, which is an exact copy of the real DOM.
 	When there are modifications in the web application, React updates the virtual DOM first and then computes the differences between the real DOM and the virtual DOM.
