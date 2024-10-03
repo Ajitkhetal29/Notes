@@ -1,9 +1,9 @@
 React JS :
 
-	- react js is a javascript library for front-end developmemnt.
-	- used to build user interface and ui components.
-	- known for its component based architecture which allows us to create reusable comnponents.
-	- used to build single page application.
+	react js is a javascript library for front-end developmemnt.
+	used to build user interface and ui components.
+	known for its component based architecture which allows us to create reusable comnponents.
+	used to build single page application.
 	jsx feature
 
 Features  
@@ -11,7 +11,11 @@ Features
 	JSX combines HTML and JavaScript, allowing you to embed JavaScript objects within HTML elements.
 	It enhances code readability and simplifies UI development.
 
+	
+
 	2.Virtual DOM (Document Object Model):
+	it is an in-memory representation of DOM.
+	DOM Refer to the Document object model that represents the content of XML or HTML documents as a tree structure so the pragrams can be read , accessed and changed in document structure , style and contenrt.
 	React uses a virtual DOM, which is an exact copy of the real DOM.
 	When there are modifications in the web application, React updates the virtual DOM first and then computes the differences between the real DOM and the virtual DOM.
 	This approach minimizes unnecessary re-rendering and improves performance.
@@ -23,7 +27,11 @@ Features
 	4. Performance:
 	React’s virtual DOM and component-based architecture contribute to better performance.
 	Separate components allow efficient rendering and faster execution.
-	
+
+Babel : - It is an transpiler.
+	- Helps to convert the sourcde to another browser understandable language.
+	- bable converts the JSX code into simplwe react function that can be understandabnle by browser.
+
 	
 	Node.js - provides the runtime environment to execute javascript code.
 	npm		- use to manage project dependencies 
