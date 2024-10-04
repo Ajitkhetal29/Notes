@@ -156,6 +156,8 @@ Babel : - It is an transpiler.
 			- hooks should be use inside component.
 
 	Forms - 
+			- components used to collect and manage the user inputs .
+			- includes input like text filed, check box, date input & dropdowns.
 			- each input state can be srored in component state
 			- can use onChange to detect input changes
 			- can use onSubmit form form submission and prevent default with event.preventDefault()
