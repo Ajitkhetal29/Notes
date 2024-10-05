@@ -167,3 +167,46 @@ Babel : - It is an transpiler.
 	State: Components can manage their internal state using the useState hook. This state dictates the component’s appearance and behavior, and updates trigger re-renders.	
 	Lifecycle Methods: React provides lifecycle methods like componentDidMount and componentDidUpdate that allow you to perform actions at specific stages of a component’s lifecycle.
 	Conditional Rendering: Control what gets displayed on the screen based on certain conditions using conditional statements within JSX.
+
+	Hooks   - In react application hooks are the reusable functions use access the states.
+
+		* useReducer - usereducer is use handle more complex state logic than useState.
+		     - Useful when the next stet is dependent on the previoius state.
+		     -  const [state, dispatch] = useReducer(reducer, initialState);
+		     - state - current state , dispatch -can call a function that will call and update the state.
+		     - reducer - fubnction takes current state and action returns new state
+		     - inituialstate - initial value
+
+		eg. ````
+			
+			    const initialCount = {count : 0};
+			
+			    function reducer(state , action) {
+			        switch (action.type) {
+			            case "increment":
+			              return { count: state.count + 1 }; // Return a new state object
+			            case "decrement":
+			              return { count: state.count - 1 };
+			            case "reset":
+			              return { count: 0 };
+			            default:
+			              return state;
+			          }
+			        
+			    }
+			
+			    const [state , dispatch] = useReducer(reducer, initialCount)
+			
+			    return <>
+			
+			    <p>Initial count : {state.count}</p>
+			
+			    <button onClick={() => dispatch({type : 'increment'})}>Add</button>
+			    <button onClick={() => dispatch({type : 'decrement'})}>Minus</button>
+			    <button onClick={() => dispatch({type : 'reset'})}>Reset</button>
+			
+			    </>
+
+```
+					
+	
