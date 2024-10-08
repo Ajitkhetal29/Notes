@@ -164,7 +164,31 @@ Babel : - It is an transpiler.
 			- validation - can use custom validation or third patry libraries 
 
 
-	State: Components can manage their internal state using the useState hook. This state dictates the component’s appearance and behavior, and updates trigger re-renders.	
+	useState:
+		Components can manage their internal state using the useState hook. 
+		This state dictates the component’s appearance and behavior, and updates trigger re-renders.
+		Usage
+			Adding state to a component
+			Updating state based on the previous state
+			Updating objects and arrays in state
+			Avoiding recreating the initial state
+			Resetting state with a key
+			Storing information from previous renders
+
+		Syntax:
+		const [var, setVar] = useState(initialValue);
+		Here,
+		
+		var: name of the state variable
+		setVar: function to manage and modify the state variable
+		initialValue: the first value to initialize the variable
+
+		- whenever we want to set or update the var value we can use the setVar method ans pass the new value.
+
+
+
+
+
 	Lifecycle Methods: React provides lifecycle methods like componentDidMount and componentDidUpdate that allow you to perform actions at specific stages of a component’s lifecycle.
 	Conditional Rendering: Control what gets displayed on the screen based on certain conditions using conditional statements within JSX.
 
