@@ -231,6 +231,14 @@ Babel : - It is an transpiler.
 			
 			    </>
 
-```
+	UseEffect hook: useful for data fetching or event listeners.
+			runs automatically after every render or reload.
+			we can provide an dependency array , an function to control when to load .
+			if we provide an empty array it will run one time only.
+		
+
+
+
+			
 					
 	
