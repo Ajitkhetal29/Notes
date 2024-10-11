@@ -235,6 +235,9 @@ Babel : - It is an transpiler.
 			runs automatically after every render or reload.
 			we can provide an dependency array , an function to control when to load .
 			if we provide an empty array it will run one time only.
+
+		Advance : we can use the useEffect advance concepts like abort and interval to return a function at the end of any function or task.
+			eg . if we are facing data from the dummy server . once the fetching task is completed we can kill that funtion.   
 		
 
 
