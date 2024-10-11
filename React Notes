@@ -263,9 +263,32 @@ Babel : - It is an transpiler.
 				    </p>
 				  );
 				};
+			```
+				
+				  useEffect(() => {
+				    setFetching(false);
+				    fetch("https://dummyjson.com/posts")
+				      .then((res) => res.json())
+				      .then((data) => {
+				        addInitialPosts(data.posts);
+				        setFetching(true);
+				
+				      });
+				
+				      return () => {
+				        console.log('cleanup')
+				      }
+				  }, []);
+				
+				  return (
+				    <>
+				    {!fetching && <LoadingSpinner></LoadingSpinner>}
+				      {/* {postlist.length === 0 && <WelcomeMessage></WelcomeMessage>} */}
+				      {postlist.map((post) => (
+				        <Post key={post.id} post={post}></Post>
+				      ))}
+
 				```
-
-
 
 			
 					
