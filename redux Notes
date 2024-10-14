@@ -1,0 +1,10 @@
+Redux Purpose - 
+                useful for state management in cross component or app-wide state.
+                redux is predictable state management library for javascript apps
+                same work as createContext hook. 
+
+React-context vs Redux
+                we can use both
+                in react - context we have to write lot of code.. and the apps become slower.
+                for evevy liitle change context will repaint the apps.
+                redux is much faster with great performamnce.
